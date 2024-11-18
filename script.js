@@ -66,11 +66,22 @@ materials.forEach((material, index) => {
     // Add hover events for map marker
     marker.on('mouseover', () => {
         li.style.backgroundColor = "#d1f7d1"; // Change sidebar item background on hover
+        
+        // Scroll the sidebar if necessary
+        const liRect = li.getBoundingClientRect();
+        const listContainer = document.getElementById('material-list');
+        const listContainerRect = listContainer.getBoundingClientRect();
+
+        // If the item is out of view, scroll it into view
+        if (liRect.top < listContainerRect.top || liRect.bottom > listContainerRect.bottom) {
+            li.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
     });
 
     marker.on('mouseout', () => {
         li.style.backgroundColor = ""; // Reset sidebar item background
     });
 });
+
 
 
