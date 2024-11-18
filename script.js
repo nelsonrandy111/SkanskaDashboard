@@ -28,8 +28,8 @@ materials.forEach(material => {
         <strong>Price:</strong> ${material.price} <br>
         <strong>Savings:</strong> ${material.savings} <br>
         <div class="impact">
-            <span class="leaf">🌿</span> 
-            <strong>Environmental Impact:</strong> 
+            <span class="arrow">↓</span> 
+            <strong>Relative CO2 Emissions:</strong> 
             <span class="percent">${material.impact}</span>
         </div>
         <a class="details-link">Details</a>

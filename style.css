@@ -25,6 +25,8 @@ header {
     font-weight: bold;
     color: #004d00; /* Green title */
     margin-right: 20px; /* Space for logo and menu items */
+    position: absolute;
+    left: 20px; /* Keep the title in the left corner */
 }
 
 nav ul {
@@ -110,10 +112,9 @@ main {
     align-items: center;
 }
 
-#sidebar li .impact .leaf {
-    color: #33cc33; /* Green leaf emoji color */
-    font-size: 1.4em;
-    margin-right: 8px; /* Spacing between the leaf and the text */
+#sidebar li .impact .arrow {
+    font-size: 1.5em;
+    margin-right: 8px; /* Spacing between the arrow and the text */
 }
 
 #sidebar li .impact .percent {
