@@ -9,7 +9,7 @@ body {
 
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Center the buttons in the header */
     align-items: center;
     background-color: #e8f5e8; /* Lighter green for header */
     color: #004d00; /* Green for text */
@@ -24,6 +24,7 @@ header {
     font-size: 1.5em;
     font-weight: bold;
     color: #004d00; /* Green title */
+    margin-right: 20px; /* Space for logo and menu items */
 }
 
 nav ul {
