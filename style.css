@@ -1,15 +1,16 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     display: flex;
     flex-direction: column;
+    height: 100vh;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: #00457C;
     color: white;
     padding: 10px 20px;
     position: fixed;
@@ -31,49 +32,56 @@ nav ul {
     padding: 0;
 }
 
-nav ul li {
-    display: inline;
-}
-
 nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 1em;
-    transition: color 0.3s;
-    background-color: #444; /* Updated background color for visibility */
-    padding: 8px 12px; /* Padding for button-like look */
-    border-radius: 5px; /* Rounded corners */
+    padding: 8px 12px;
+    border-radius: 5px;
+    background-color: #0078D7;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #f4f4f4;
-    background-color: #555; /* Darker background on hover */
+    background-color: #005EA6;
+}
+
+main {
+    display: flex;
+    margin-top: 60px;
+    height: calc(100vh - 60px);
 }
 
 #sidebar {
     width: 30%;
-    padding: 15px;
-    background-color: #f4f4f4;
-    height: calc(100vh - 60px); /* Adjusted height for header offset */
-    margin-top: 60px; /* Offset to prevent overlap with header */
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-right: 1px solid #ddd;
     overflow-y: auto;
 }
 
-#map {
-    width: 70%;
-    height: calc(100vh - 60px); /* Adjusted height for header offset */
-    margin-top: 60px; /* Offset to prevent overlap with header */
+#sidebar h2 {
+    margin-top: 0;
 }
 
-ul {
+#sidebar ul {
     list-style: none;
     padding: 0;
 }
 
-li {
+#sidebar li {
     margin-bottom: 15px;
     padding: 10px;
-    background-color: #fff;
+    background-color: white;
     border: 1px solid #ddd;
     border-radius: 5px;
+}
+
+#map {
+    width: 70%;
+    height: 100%;
+}
+
+ul#material-list li {
+    line-height: 1.5em;
 }
