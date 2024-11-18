@@ -67,6 +67,7 @@ main {
     margin-top: 0;
     color: #004d00;
     font-size: 1.5em;
+    text-align: left; /* Align header to the left */
 }
 
 #sidebar ul {
@@ -123,4 +124,12 @@ main {
 #map {
     width: 70%;
     height: 100%;
+}
+
+footer {
+    text-align: left; /* Align contact section to the left */
+    padding: 20px;
+    background-color: #e8f5e8;
+    color: #004d00;
+    font-size: 1em;
 }
