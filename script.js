@@ -18,8 +18,11 @@ const materials = [
     { coords: [40.7484, -73.9857], name: 'Insulation Foam', location: '350 5th Ave, New York, NY', company: 'AECOM', price: '$2200', savings: '$450', impact: '40%' }
 ];
 
+// Array to hold map markers and their corresponding list items
+let markers = [];
+
 // Populate the sidebar and add map markers
-materials.forEach(material => {
+materials.forEach((material, index) => {
     const li = document.createElement('li');
     li.innerHTML = `
         <strong>Material:</strong> ${material.name} <br>
@@ -35,14 +38,39 @@ materials.forEach(material => {
         </div>
         <a class="details-link">Details</a>
     `;
+    
+    // Add hover events for sidebar
+    li.addEventListener('mouseover', () => {
+        markers[index].openPopup(); // Open popup on hover
+        li.style.backgroundColor = "#d1f7d1"; // Change background on hover
+    });
+    
+    li.addEventListener('mouseout', () => {
+        markers[index].closePopup(); // Close popup when mouse leaves
+        li.style.backgroundColor = ""; // Reset background color
+    });
+    
     document.getElementById('material-list').appendChild(li);
 
-    L.marker(material.coords).addTo(map).bindPopup(`
+    // Create marker for map
+    const marker = L.marker(material.coords).addTo(map).bindPopup(`
         <strong>${material.name}</strong><br>
         ${material.location}<br>
         Price: ${material.price}<br>
         Savings: ${material.savings}
     `);
+
+    // Store marker in the markers array
+    markers.push(marker);
+
+    // Add hover events for map marker
+    marker.on('mouseover', () => {
+        li.style.backgroundColor = "#d1f7d1"; // Change sidebar item background on hover
+    });
+
+    marker.on('mouseout', () => {
+        li.style.backgroundColor = ""; // Reset sidebar item background
+    });
 });
 
 
