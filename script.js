@@ -7,5 +7,13 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 // Add markers for materials
-L.marker([40.73061, -73.935242]).addTo(map).bindPopup('Steel Beams - Site A');
-L.marker([40.650002, -73.949997]).addTo(map).bindPopup('Concrete Blocks - Site B');
+const materials = [
+    { coords: [40.73061, -73.935242], info: 'Steel Beams - Site A' },
+    { coords: [40.650002, -73.949997], info: 'Concrete Blocks - Site B' },
+    { coords: [40.712217, -74.016058], info: 'Recycled Timber - Site C' },
+    { coords: [40.758896, -73.985130], info: 'Glass Panels - Site D' },
+];
+
+materials.forEach(material => {
+    L.marker(material.coords).addTo(map).bindPopup(material.info);
+});
