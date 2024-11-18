@@ -20,7 +20,6 @@ const materials = [
 
 // Populate the sidebar and add map markers
 materials.forEach(material => {
-    // Add to sidebar
     const li = document.createElement('li');
     li.innerHTML = `
         <strong>Material:</strong> ${material.name} <br>
@@ -28,7 +27,11 @@ materials.forEach(material => {
         <strong>Company:</strong> ${material.company} <br>
         <strong>Price:</strong> ${material.price} <br>
         <strong>Savings:</strong> ${material.savings} <br>
-        <strong>Impact:</strong> ${material.impact}
+        <div class="impact">
+            <strong>Environmental Impact:</strong> 
+            <span class="leaf">🌿</span> 
+            <span class="percent">${material.impact}</span>
+        </div>
         <a class="details-link">Details</a>
     `;
     document.getElementById('material-list').appendChild(li);

@@ -60,25 +60,33 @@ main {
     padding: 20px;
     border-right: 1px solid #ddd;
     overflow-y: auto;
+    border-radius: 10px; /* Rounded corners for a softer look */
 }
 
 #sidebar h2 {
     margin-top: 0;
-    color: #004d00; /* Dark green for headings */
+    color: #004d00;
+    font-size: 1.5em;
 }
 
 #sidebar ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 #sidebar li {
-    margin-bottom: 15px;
-    padding: 10px;
-    background-color: white;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #ffffff;
     border: 1px solid #ddd;
-    border-radius: 5px;
-    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease;
+}
+
+#sidebar li:hover {
+    transform: translateY(-5px); /* Hover effect for cards */
 }
 
 #sidebar li .details-link {
@@ -91,11 +99,30 @@ main {
     cursor: pointer;
 }
 
+#sidebar li .impact {
+    font-size: 1em;
+    font-weight: bold;
+    color: #007500; /* Green for environmental impact */
+    margin-top: 10px;
+}
+
+#sidebar li .impact span {
+    font-size: 1.2em;
+    margin-left: 5px;
+}
+
+#sidebar li .impact .leaf {
+    color: #33cc33; /* Green leaf emoji color */
+    font-size: 1.4em;
+}
+
+#sidebar li .impact .percent {
+    font-size: 1.2em;
+    color: #339900;
+    font-weight: bold;
+}
+
 #map {
     width: 70%;
     height: 100%;
-}
-
-ul#material-list li {
-    line-height: 1.5em;
 }
