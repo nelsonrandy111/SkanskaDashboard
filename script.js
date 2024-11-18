@@ -28,20 +28,21 @@ materials.forEach(material => {
         <strong>Price:</strong> ${material.price} <br>
         <strong>Savings:</strong> ${material.savings} <br>
         <div class="impact">
-            <span class="arrow">↓</span> 
+            <span class="leaf">🌿</span> 
             <strong>Relative CO2 Emissions:</strong> 
+            <span class="arrow">↓</span> 
             <span class="percent">${material.impact}</span>
         </div>
         <a class="details-link">Details</a>
     `;
     document.getElementById('material-list').appendChild(li);
 
-    // Add marker to the map
     L.marker(material.coords).addTo(map).bindPopup(`
-        <b>${material.name}</b><br>
+        <strong>${material.name}</strong><br>
         ${material.location}<br>
-        Company: ${material.company}<br>
-        Price: ${material.price}
+        Price: ${material.price}<br>
+        Savings: ${material.savings}
     `);
 });
+
 

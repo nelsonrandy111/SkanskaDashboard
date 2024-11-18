@@ -112,6 +112,11 @@ main {
     align-items: center;
 }
 
+#sidebar li .impact .leaf {
+    font-size: 1.5em;
+    margin-right: 8px; /* Spacing between the leaf emoji and text */
+}
+
 #sidebar li .impact .arrow {
     font-size: 1.5em;
     margin-right: 8px; /* Spacing between the arrow and the text */
