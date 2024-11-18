@@ -40,25 +40,29 @@ nav ul li a {
     text-decoration: none;
     font-size: 1em;
     transition: color 0.3s;
+    background-color: #444; /* Updated background color for visibility */
+    padding: 8px 12px; /* Padding for button-like look */
+    border-radius: 5px; /* Rounded corners */
 }
 
 nav ul li a:hover {
     color: #f4f4f4;
+    background-color: #555; /* Darker background on hover */
 }
 
 #sidebar {
     width: 30%;
     padding: 15px;
     background-color: #f4f4f4;
-    height: calc(100vh - 50px);
-    margin-top: 50px; /* offset for header */
+    height: calc(100vh - 60px); /* Adjusted height for header offset */
+    margin-top: 60px; /* Offset to prevent overlap with header */
     overflow-y: auto;
 }
 
 #map {
     width: 70%;
-    height: calc(100vh - 50px);
-    margin-top: 50px; /* offset for header */
+    height: calc(100vh - 60px); /* Adjusted height for header offset */
+    margin-top: 60px; /* Offset to prevent overlap with header */
 }
 
 ul {
